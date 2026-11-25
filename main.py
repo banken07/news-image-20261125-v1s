@@ -1035,7 +1035,7 @@ def draw_timeline(cv):
         cv.text(cx, 502, t, 11, True, INK, align="center")
         lines = wrap_text(label, 10, False, 170)
         for k, ln in enumerate(lines[:2]):
-            cv.text(cx, 526 + k * 11, ln, 10, False, INK, align="center")
+            cv.text(cx, 526 + k * 11, ln, 10, True, INK, align="center")
 
 
 def draw_small(cv):
@@ -1067,7 +1067,7 @@ def draw_also(cv):
         x = M + col * 268
         y = 800 + row * 13
         cv.fill_rect(x, y - 8, 3, 3, TEAL)
-        cv.text(x + 8, y, item, 11, False, INK)
+        cv.text(x + 8, y, item, 11, True, INK)
 
 
 def _project(lon, lat):
@@ -1110,7 +1110,7 @@ def draw_datecheck(cv):
         col, row = divmod(i, 4)
         x = 36 + col * 316
         y = 962 + row * 11
-        cv.text(x, y, item, 10, False, INK)
+        cv.text(x, y, item, 10, True, INK)
 
 
 def draw_footer(cv):
@@ -1119,7 +1119,7 @@ def draw_footer(cv):
             "\u00b7 ABS \u00b7 Mehr \u00b7 One Turn \u2014 All stories first reported or developing "
             "Wed 25 Nov 2026 unless dated in DATE CHECK \u00b7 Rendered by code, "
             "no photos",
-            9, False, INK_SOFT, align="center")
+            9, False, INK, align="center")
 
 
 def build():
