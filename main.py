@@ -277,7 +277,7 @@ GLYPH_BLOB = [
 ]
 
 UPM = 2048
-SS = 2  # supersample factor for glyph masks (2x render, averaged down)
+SS = 3  # supersample factor for glyph masks (3x render, averaged down)
 
 
 def _decode_blob():
@@ -1056,7 +1056,7 @@ def draw_small(cv):
                         align="center")
             dl = wrap_text(deck, 10, False, 171)
             for k, ln in enumerate(dl[:2]):
-                cv.text(x + 93, y0 + 88 + k * 12, ln, 10, False, DECK_GREY,
+                cv.text(x + 93, y0 + 88 + k * 13, ln, 10, False, DECK_GREY,
                         align="center")
 
 
@@ -1065,7 +1065,7 @@ def draw_also(cv):
     for i, item in enumerate(ALSO):
         col, row = divmod(i, 11)
         x = M + col * 268
-        y = 800 + row * 12
+        y = 800 + row * 13
         cv.fill_rect(x, y - 8, 3, 3, TEAL)
         cv.text(x + 8, y, item, 11, False, INK)
 
@@ -1109,7 +1109,7 @@ def draw_datecheck(cv):
     for i, item in enumerate(DATECHECK):
         col, row = divmod(i, 4)
         x = 36 + col * 316
-        y = 962 + row * 10
+        y = 962 + row * 11
         cv.text(x, y, item, 10, False, INK)
 
 
