@@ -610,6 +610,7 @@ PAPER = (247, 242, 231)
 PANEL = (238, 232, 216)
 INK = (26, 26, 26)
 INK_SOFT = (78, 76, 68)
+DECK_GREY = (58, 56, 50)  # v1.3: small-card deck only, darker than INK_SOFT
 TEAL = (15, 76, 76)
 TEAL_DK = (10, 52, 52)
 NAVY = (20, 33, 61)
@@ -1045,7 +1046,9 @@ def draw_small(cv):
             x = M + c * 195
             y0 = 544 + r * 108
             rect_outline(cv, x, y0, 187, 108, RULE, 1)
-            ICONS[icon](cv, x + 75, y0 + 6, 36)
+            # v1.3 polish: treaty +3px, ship +2px (both land at 9px clearance)
+            dy = {"treaty": 3, "ship": 2}.get(icon, 0)
+            ICONS[icon](cv, x + 75, y0 + 6 + dy, 36)
             draw_pill_right(cv, x + 182, y0 + 5, p)
             hl = wrap_text(head, 15, True, 171)
             for k, ln in enumerate(hl[:2]):
@@ -1053,7 +1056,7 @@ def draw_small(cv):
                         align="center")
             dl = wrap_text(deck, 10, False, 171)
             for k, ln in enumerate(dl[:2]):
-                cv.text(x + 93, y0 + 88 + k * 12, ln, 10, False, INK_SOFT,
+                cv.text(x + 93, y0 + 88 + k * 12, ln, 10, False, DECK_GREY,
                         align="center")
 
 
@@ -1073,8 +1076,8 @@ def _project(lon, lat):
     return x, y
 
 
-LABEL_DX = {"Tokyo": (6, -6, "left"), "Seoul": (-6, 12, "right"),
-            "Hormuz": (6, -6, "left"), "Canberra": (-6, 12, "right"),
+LABEL_DX = {"Tokyo": (6, -6, "left"), "Seoul": (-9, 9, "right"),
+            "Hormuz": (6, -9, "left"), "Canberra": (-6, 12, "right"),
             "Iowa": (6, -6, "left"), "Cartagena": (-6, 12, "right")}
 
 
