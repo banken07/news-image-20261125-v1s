@@ -1047,7 +1047,12 @@ def draw_small(cv):
             y0 = 544 + r * 108
             rect_outline(cv, x, y0, 187, 108, RULE, 1)
             # v1.3 polish: treaty +3px, ship +2px (both land at 9px clearance)
-            dy = {"treaty": 3, "ship": 2}.get(icon, 0)
+            # v1.6 polish: even ink-top clearance to ~10px — the five 8px
+            # icons (+2: cpi/store/flag/gavel/blast); helmet -4px (was 16px,
+            # optical centre 26.5 -> 23, dead-centre of the pack). Bottom
+            # gaps after: flag 4px (tightest), ship 5px, rest 7-13px.
+            dy = {"treaty": 3, "ship": 2, "cpi": 2, "store": 2, "flag": 2,
+                  "gavel": 2, "blast": 2, "helmet": -4}.get(icon, 0)
             ICONS[icon](cv, x + 75, y0 + 6 + dy, 36)
             draw_pill_right(cv, x + 182, y0 + 5, p)
             hl = wrap_text(head, 15, True, 171)
@@ -1076,8 +1081,8 @@ def _project(lon, lat):
     return x, y
 
 
-LABEL_DX = {"Tokyo": (6, -6, "left"), "Seoul": (-9, 9, "right"),
-            "Hormuz": (6, -9, "left"), "Canberra": (-6, 12, "right"),
+LABEL_DX = {"Tokyo": (6, -6, "left"), "Seoul": (-10, 9, "right"),
+            "Hormuz": (5, -10, "left"), "Canberra": (-6, 12, "right"),
             "Iowa": (6, -6, "left"), "Cartagena": (-6, 12, "right")}
 
 
