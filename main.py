@@ -664,7 +664,7 @@ SMALL = [
     ("N. KOREA EXPELS SWISS ENVOY",
      "48 hours to leave; Pyongyang office shut after 37 days.",
      "CONFIRMED", "flag"),
-    ("SYDNEY DOUBLE-MURDER GUILTY",
+    ("SYDNEY DOUBLE MURDER GUILTY",
      "Ex-cop convicted over 2024 killings; sentencing Mar 2027.",
      "CONFIRMED", "gavel"),
     ("26 TRAPPED IN BOGOR GOLD MINE",
