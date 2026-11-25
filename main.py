@@ -682,7 +682,7 @@ ALSO = [
     "Samsung \u22129.1%; SK Hynix \u22128.6%",
     "Kioxia \u221215.4% in Tokyo sell-off",
     "Iran says it downed 2 drones",
-    "Qatar presses to reopen Hormuz",
+    "Hang Seng +1% as Asia sinks",
     "Brent \u221221% in Nov, at $87.49",
     "Sensex +1.8% as Asia sinks",
     "HK marks Tai Po fire, 168 dead",
@@ -752,8 +752,8 @@ DATECHECK = [
     "BepiColombo enters Mercury orbit \u2014 Sat 21 Nov",
 ]
 
-REGION_LINE = ("ASIA-PACIFIC 15 \u00b7 MIDDLE EAST 5 \u00b7 AMERICAS 10 "
-               "\u00b7 OCEANIA 3 \u00b7 EUROPE 2 \u2014 13 PLACES PINNED")
+REGION_LINE = ("ASIA-PACIFIC 14 \u00b7 MIDDLE EAST 4 \u00b7 AMERICAS 10 \u00b7 "
+               "OCEANIA 4 \u00b7 EUROPE 2 \u00b7 WORLD 1 \u2014 13 PLACES PINNED")
 
 # Simplified continent outlines (lon, lat), equirectangular schematic.
 CONTINENTS = [
@@ -985,7 +985,8 @@ def rect_outline(cv, x, y, w, h, color, width=1):
 def draw_masthead(cv):
     cv.text(512, 50, "THE WEDNESDAY GLOBE", 34, True, INK, align="center")
     cv.text(512, 68, "WEDNESDAY 25 NOVEMBER 2026 \u00b7 35 STORIES "
-            "\u00b7 ALL FIRST REPORTED TODAY", 11, True, TEAL, align="center")
+            "\u00b7 FIRST REPORTED OR DEVELOPING TODAY", 11, True, TEAL,
+            align="center")
     cv.fill_rect(M, 74, CW, 2, INK)
     cv.fill_rect(M, 78, CW, 1, INK)
 
@@ -1101,7 +1102,7 @@ def draw_datecheck(cv):
     rect_outline(cv, M, 936, CW, 70, RED, 2)
     cv.text(36, 950, "DATE CHECK \u2014 PICTURED ELSEWHERE AS TODAY'S NEWS. "
             "THESE ARE NOT.", 12, True, RED)
-    cv.text(988, 950, "+34 MORE CHECKED", 10, True, RED, align="right")
+    cv.text(988, 950, "+35 MORE CHECKED", 10, True, RED, align="right")
     for i, item in enumerate(DATECHECK):
         col, row = divmod(i, 4)
         x = 36 + col * 316
@@ -1112,7 +1113,7 @@ def draw_datecheck(cv):
 def draw_footer(cv):
     cv.text(512, 1016,
             "Sources: AP \u00b7 Reuters \u00b7 BBC \u00b7 Al Jazeera \u00b7 Yonhap "
-            "\u00b7 ABS \u00b7 Mehr \u00b7 One Turn \u2014 All stories first reported "
+            "\u00b7 ABS \u00b7 Mehr \u00b7 One Turn \u2014 All stories first reported or developing "
             "Wed 25 Nov 2026 unless dated in DATE CHECK \u00b7 Rendered by code, "
             "no photos",
             9, False, INK_SOFT, align="center")

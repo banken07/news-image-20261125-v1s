@@ -13,7 +13,7 @@ Sum up **Wednesday 25 November 2026's world news in one image** — an entry for
 
 A single Python program (`main.py`, pure stdlib, no network) that renders a
 1024×1024 broadsheet front page — **"The Wednesday Globe"** — from 35 stories
-first reported on Wednesday 25 November 2026:
+first reported or developing on Wednesday 25 November 2026:
 
 - **3 leads** — Asia's AI tech rout (Nikkei −3.6%, Kospi −5.6%), Shenzhou-24
   carrying the first Pakistani in orbit, and Iran's claim of two more tankers
@@ -42,6 +42,6 @@ MAKEFUN_OUTPUT_DIR=/output python3 main.py   # writes /output/entry.png
 
 Every number on the page was verified live against AP, Reuters, BBC,
 Al Jazeera, Yonhap, the ABS, Mehr News, and the One Turn day page for
-25 November 2026. The full 46-item date-check list (stories pictured
+25 November 2026. The full 47-item date-check list (stories pictured
 elsewhere as Wednesday's news that actually happened on Tuesday
 24 November or earlier) is documented in the project notes.
