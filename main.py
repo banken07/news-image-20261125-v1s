@@ -1082,7 +1082,7 @@ def _project(lon, lat):
 
 
 LABEL_DX = {"Tokyo": (6, -6, "left"), "Seoul": (-10, 9, "right"),
-            "Hormuz": (5, -10, "left"), "Canberra": (-6, 12, "right"),
+            "Hormuz": (4, -11, "left"), "Canberra": (-6, 12, "right"),
             "Iowa": (6, -6, "left"), "Cartagena": (-6, 12, "right")}
 
 
