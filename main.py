@@ -1098,14 +1098,14 @@ def draw_map(cv):
 
 
 def draw_datecheck(cv):
-    rect_outline(cv, M, 936, CW, 66, RED, 2)
-    cv.text(36, 952, "DATE CHECK \u2014 PICTURED ELSEWHERE AS TODAY'S NEWS. "
+    rect_outline(cv, M, 936, CW, 70, RED, 2)
+    cv.text(36, 950, "DATE CHECK \u2014 PICTURED ELSEWHERE AS TODAY'S NEWS. "
             "THESE ARE NOT.", 12, True, RED)
-    cv.text(988, 952, "+34 MORE CHECKED", 10, True, RED, align="right")
+    cv.text(988, 950, "+34 MORE CHECKED", 10, True, RED, align="right")
     for i, item in enumerate(DATECHECK):
         col, row = divmod(i, 4)
         x = 36 + col * 316
-        y = 966 + row * 10
+        y = 962 + row * 10
         cv.text(x, y, item, 10, False, INK)
 
 
